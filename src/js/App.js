@@ -133,7 +133,7 @@ class App extends React.Component {
     this.setState((prevState, props) => {
       if (prevState.filtDatVals[key] !== value || prevState.filtDatVals[key] === undefined ) {
         prevState.filtDatVals[key] = value; 
-        this.highlightItem(value, key+'_inactive_item', key+'_active_item',key);
+        this.highlightItem(value, key+'_inactive_item', key+'_active_item active_item',key);
       } else {
         prevState.filtDatVals[key] = undefined; 
         this.highlightItem(value, key+'_inactive_item', key+'_inactive_item', key);
@@ -184,7 +184,14 @@ class App extends React.Component {
     let selectItem = document.getElementById(`${identifier}-${value}`);
     selectItem.className = activeClass;
   }
-
+  checkYear (val, index, arr) {
+    if(this.min === 'undefined' || this.max === 'undefined') {
+      return true;
+    }
+    let date_ref = val.date,
+      new_date = date_ref.slice(0, 7);
+    return new_date >= this.min && new_date <= this.max;
+  }
   check(val, index, arr){
     if(this.data[this.filter] === undefined) {
       return true;
@@ -198,6 +205,7 @@ class App extends React.Component {
       filteredData = filteredData.filter(this.check, {filter:filter,data:state.filtDatVals});
     });
       // console.log(state.start_domain, "state.start_domain",filteredData[0], filteredData)
+    filteredData=filteredData.filter(this.checkYear, state.year_value)
     if (filteredData[0] !== undefined){
       state.start_domain = new Date(filteredData[0].date),
       state.end_domain = new Date(filteredData[filteredData.length - 1].date)
@@ -205,6 +213,7 @@ class App extends React.Component {
       state.start_domain = NaN;
       state.end_domain = NaN;
     }
+    console.log(filteredData);
     return filteredData;
   }
 
@@ -312,7 +321,6 @@ class App extends React.Component {
       )
     } else {
       let optionsObj={};
-      console.log(this.state);
       this.state.filters.forEach((dat)=> {
         optionsObj[dat] = this.sortObject(Utils.groupBy(this.state.filteredJSON, dat)).map((d, i) => {
           return (
@@ -417,7 +425,7 @@ class App extends React.Component {
                             </th>
                           </tr>
                         </thead>
-                        <tbody>{optionsObj[key]}</tbody>
+                        <tbody className="table-tbody">{optionsObj[key]}</tbody>
                       </table>
                     </div>
                   )
