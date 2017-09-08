@@ -27,17 +27,9 @@
       </div>
     </div>
     <div class="ui grid cover-image-div" >
-      <img class="cover-image" src="../src/img/lynching-cover-desktop.jpg" >
-      <img class="cover-image-mobile" src="../src/img/lynching-cover-mobile.jpg" width="100%" >
       <p class="notes-div disclaimer-text">It may be true that the law cannot make a man love me,<br/>but it can keep him from lynching me. - Martin Luther King, Jr.</p>
     </div>
     <div class="ui grid hate-crime-toggle">
-      <p>Study this issue as...</p>
-      <div class="ui buttons">"
-        <a href="data.html"><button class="ui red button">Law & Order</button></a>
-        <div class="or"></div>
-        <a href="hate-crime.html">About<button class="ui button">Hate Crime</button></a>
-      </div>
       <p class="hint">Based on selection, data points in filters change.</p>
     </div>
     <div class="ui grid">
@@ -70,7 +62,37 @@
           chartTitle: 'Mob Justice in India',
           height: 600,
           defaultCircleColor: '#F02E2E'
-        }
+        },
+        filterNames:[
+          'classification',
+          'party_whose_chief_minister_is_in_power',
+          'state',
+          'victim_social_classification',
+          'accused_social_classification',
+          'police_to_population_in_state',
+          'judge_to_population_in_state',
+          'did_the_police_intervention_prevent_death',
+          'was_incident_planned',
+          'area_classification',
+          'police_vehicles_per_km',
+          'does_state_have_village_defence_force',
+          'did_the_police_intervene'
+        ],
+        filterHeaders:[
+          "What led to the violence?",
+          "Was the incident planned?",
+          "State",
+          "Party whose Chief Minister was in power",
+          "Area type",
+          "Judge to population ratio",
+          "Police to population ratio",
+          "Police vehicles per sq. km",
+          "Did the police intervene?",
+          "Did the police intervention prevent death?",
+          "Does state have village defence force?",
+          "Victim social classification",
+          "Accused social classification",
+        ]
       })
       x.renderLaptop();
     </script>

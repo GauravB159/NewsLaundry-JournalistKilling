@@ -29,6 +29,8 @@ ProtoGraph.Card.toMaps.prototype.renderLaptop = function () {
       dataURL={this.options.dataURL}
       topoURL={this.options.topoURL}
       chartOptions={this.options.chartOptions}
+      filterNames={this.options.filterNames}
+      filterHeaders={this.options.filterHeaders}
       mode={this.mode}
       dimensionWidth = {dimension.width}
       ref={(e) => {
