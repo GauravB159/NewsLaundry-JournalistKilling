@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset = "UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>#Mobbed: What emboldens lynching and vigilantism in India?</title>
+  <link rel="stylesheet" type="text/css" href="https://dwln9tzsi7g07.cloudfront.net/Assets/semantic.min.css">
+  <link rel="stylesheet" type="text/css" href="src/css/styles.css">
+  <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+</head>
+<body>
+  <div class="index-page">
+    <div class="social-share-icons">
+      <a href="http://www.facebook.com/sharer/sharer.php?u=https://the-lynched.pykih.com/index.html" target="_blank" class="share-btn facebook"><i class="fa fa-facebook"></i></a>
+      <a href="http://twitter.com/share?url=https://the-lynched.pykih.com/index.html" target="_blank" class="share-btn twitter"><i class="fa fa-twitter"></i></a>
+    </div>
+    <div class="ie-navbar"><img src="http://s0.wp.com/wp-content/themes/vip/indianexpress/images/theindianexpress-logo.svg">
+    </div>
+    <div class="container">
+      <div class="page-navigation">
+        <div class="navigation-link active-link"><a href="index.html">Home</a></div>
+        <div class="navigation-link"><a href="findings.html">Findings</a></div>
+        <div class="navigation-link"><a href="data.html">Data</a></div>
+        <div class="navigation-link"><a href="about.html">About</a></div>
+      </div>
+    <div class="ui grid cover-image-div" >
+      <img class="cover-image" src="src/img/lynching-cover-desktop.jpg" >
+      <img class="cover-image-mobile" src="src/img/lynching-cover-mobile.jpg" width="100%" >
+      <p class="notes-div disclaimer-text">It may be true that the law cannot make a man love me,<br/>but it can keep him from lynching me. - Martin Luther King, Jr.</p>
+      <h3 class="subheader">Lynchings and other forms of mob violence have caught attention in the recent past, especially in the context of ‘cow protection’. <span class="highlight">But what are the root causes of these incidents?</span> <span class="highlight">Did mob violence emerge suddenly?</span> <span class="highlight">Are there common patterns to lynchings across regions in India?</span> This project stemmed out of curiosity about these basic, and even more complex questions such as: <span class="highlight">Does this kind of violence happen for specific reasons?</span> <span class="highlight">Does the law and order capacity of the state have any bearing on the frequency of these incidents?</span> <span class="highlight">And most importantly, is there anything can be done about it?</span> We tried our best to answer these questions by shedding our biases and preconceived notions. As you explore the data and visualizations, be sure to check out our FAQ that contains answers on our approach, data collection, design and interpretation.</h3>
+      <div class="banner-div">
+        <a class="data-url" href="data.html">
+          <div class="counter-area">
+            <div class="number-background">
+              <div class="single-background"></div>
+              <div class="single-background"></div>
+              <div class="single-background"></div>
+            </div>
+            <div class="display-counter">
+              <span id="animate-number" class="animate-number">0</span>
+            </div>
+          </div>
+          <div class="display-summary">Instances of lynching were reported<br>from <span id="start-date"></span> to <span id="end-date"></span>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="ui grid main-content-grid">
+      <div class="four wide column twitter-chatter">
+        <h4 class="ui header column-header zero-padding">Chatter</h4>
+        <div id="display-tweets"></div>
+      </div>
+      <div class="five wide column latest-incidents">
+        <h4 class="ui header column-header">Incidents</h4>
+        <div id="display-cards"></div>
+      </div>
+      <div class="seven wide column">
+        <h4 class="ui header column-header">Coverage in IndianExpress.com</h4>
+        <div id="display-stories"></div>
+      </div>
+      <div id="proto-modal" class="ui modal small scrolling content">
+        <i class="close icon"></i>
+        <div>
+          <div id="proto-embed-card"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+<div class="five-br-space"></div>
+<div class="bottom-navigation protograph-toMobJustice-sticky" id="protograph_toMobJustice_footer_container">
+  <div class="footer-container" >
+      <div class="page-bottom-navigation">
+        <div class="navigation-link active-link"><a href="index.html">Home</a></div>
+        <div class="navigation-link"><a href="findings.html">Findings</a></div>
+        <div class="navigation-link"><a href="data.html">Data</a></div>
+        <div class="navigation-link"><a href="about.html">About</a></div>
+      </div>
+  </div>
+</div>
+</div> <!-- end of index page -->
+
+<script src="lib/jquery.min.js"></script>
+<script src="lib/semantic.min.js"></script>
+<script src="https://d2m6lzru8erw1k.cloudfront.net/lib/protoGraph.min.js"></script>
+<script src="src/js/showMobJusticeCards.js"></script>
+<script src="src/js/fixedNavBar.js"></script>
+</body>
+</html>
